@@ -141,7 +141,7 @@ describe('DELETE /todos/:id', () => {
 describe('PATCH /todos/:id', () => {
   it('should update the todo', (done) => {
     var hexId = todos[2]._id.toHexString();
-    var text = "This is the patched text"
+    var text = "This is the patched text";
     request(app)
       .patch(`/todos/${hexId}`)
       .send({
@@ -163,7 +163,7 @@ describe('PATCH /todos/:id', () => {
     request(app)
       .patch(`/todos/${hexId}`)
       .send({
-        completed: true,
+        completed: false,
         text
       })
       .expect(200)
