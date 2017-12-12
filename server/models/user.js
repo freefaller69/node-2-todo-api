@@ -23,18 +23,16 @@ const UserSchema = new Schema({
     required: true,
     minlength: 6
   },
-  tokens: [
-    {
-      access: {
-        type: String,
-        required: true
-      },
-      token: {
-        type: String,
-        required: true
-      }
+  tokens: [{
+    access: {
+      type: String,
+      required: true
+    },
+    token: {
+      type: String,
+      required: true
     }
-  ]
+  }]
 });
 
 UserSchema.methods.toJSON = function() {
